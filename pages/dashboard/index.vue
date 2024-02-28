@@ -187,7 +187,9 @@ export default {
             this.data.forEach((row) => {
               row.battery = 0;
               row.batteryColor = "red";
-              this.$set(this, "gameOver", true);
+              //still not sure on how to use Reactivity, revisit this
+              // this.$set(this, "gameOver", true);
+              this.gameOver = true;
               //show message
               this.$buefy.toast.open({
                 message: "The thief successfully entered the house. You lost!",
